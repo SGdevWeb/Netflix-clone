@@ -7,8 +7,10 @@ function MoviesSection({ title,items }) {
         <h2 className={styles.title}> {title} </h2>
         <div className={styles.list}>
             {items.results.map((item, key) => (
-                <img className={styles.image} key={key} src={`https://image.tmdb.org/t/p/w185/${item.poster_path}`} alt={item.original_title} />
-            ))}
+
+                <img key={key} className={styles.image} src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`} alt={item.original_title} />
+
+            ))} 
         </div>
     </div>
   )

@@ -1,3 +1,95 @@
 .container {
     color: white;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.mask {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, black 10%, transparent 90%), 
+                linear-gradient(to right, black 5%, transparent 90%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 50px;
+    padding-bottom: 200px;
+}
+
+.title {
+    font-size: 100px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.row {
+    display: flex;
+}
+
+.grade, .date {
+    font-size: 22px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.grade {
+    color: red;
+}
+
+.overview {
+    font-size: 20px;
+    color: lightgray;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.buttons {
+    padding: 20px;
+    padding-left: 0;
+    button {
+        margin-right: 20px;
+        padding: 7px 15px;
+        font-size: 14px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+            background-color: red;
+            color: white;
+        }
+    }
+}
+
+.genres {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .mask {
+        padding: 5px;
+        padding-bottom: 50px;
+    }
+    .overview {
+        width: 90%;
+        font-size: 16px;
+    }
+    .title {
+        font-size: 70px;
+    }
+    .grade, .date {
+        font-size: 16px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+    .genres {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 425px) {
+    .title {
+        font-size: 50px;
+    }
 }

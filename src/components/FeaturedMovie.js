@@ -11,25 +11,33 @@ function FeaturedMovie({data}) {
     });
 
   return (
-    <section className={styles.container}>
-        <div>
-            {data.title}
-        </div>
-        <div>
-            {data.vote_average}
-        </div>
-        <div>
-            {data.release_date}
-        </div>
-        <div>
-            {data.overview}
-        </div>
-        <div>
-            <button>Lecture</button>
-            <button>+ Ma liste</button>
-        </div>
-        <div>
-            Genres : {genres.join(", ")}
+    <section 
+        className={styles.container} 
+        style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${data.poster_path})`}}
+    >
+        <div className={styles.mask}>
+            <div className={styles.title}>
+                {data.title}
+            </div>
+            <div className={styles.row}> 
+                <div className={styles.grade}>
+                    {data.vote_average}
+                </div>
+                <div className={styles.date}>
+                    {data.release_date}
+                </div>
+            </div>
+            
+            <div className={styles.overview}>
+                {data.overview}
+            </div>
+            <div className={styles.buttons}>
+                <button>Lecture</button>
+                <button>+ Ma liste</button>
+            </div>
+            <div className={styles.genres}>
+                <strong>Genres : </strong>{genres.join(", ")}
+            </div>
         </div>
     </section>
   )

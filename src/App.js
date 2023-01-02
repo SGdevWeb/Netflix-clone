@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const displayMovies = async () => {
       let movieList = await fetchs.getMovies()
-      // console.log(movieList)
+      console.log(movieList)
       setMovies(movieList)
 
       let filterMovie = movieList.filter((movie) => movie.slug === "top-rated");
