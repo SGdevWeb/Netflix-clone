@@ -32,9 +32,19 @@ async function getMovies() {
      ]
 }
 
+async function getOneMovie(movieId) {
+    let movieInfo = []
+    if (movieId) {
+        movieInfo = await fetchMovies(`movie/${movieId}`)
+    }
+    return movieInfo
+}
+
 // async function getMovies() {
 //     return await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=426e3a234759aa99fcff1851d834d857&language=fr-FR&page=1')
 //     .then((response) => response.json())
 // }
 
-export default getMovies;
+const fetchs = { getMovies, getOneMovie }
+
+export default fetchs;
