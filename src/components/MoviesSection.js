@@ -1,9 +1,13 @@
 import styles from './MoviesSection.module.scss';
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 
 function MoviesSection({ title,items }) {
 
   const list = useRef()
+
+  useEffect(() => {
+    list.current.scrollLeft = 0
+  }, [])
 
   let windowWidth = window.innerWidth
 
