@@ -31,11 +31,15 @@
 .grade, .date {
     font-size: 22px;
     font-weight: bold;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .grade {
-    color: red;
+    color: green;
+    strong {
+        color: white;
+        text-decoration: underline;
+    }
 }
 
 .overview {
@@ -68,11 +72,11 @@
 
 @media (max-width: 768px) {
     .mask {
-        padding: 5px;
+        padding: 10px;
         padding-bottom: 50px;
     }
     .overview {
-        width: 90%;
+        width: 100%;
         font-size: 16px;
     }
     .title {
@@ -91,5 +95,18 @@
 @media (max-width: 425px) {
     .title {
         font-size: 50px;
+    }
+    .overview {
+        max-height: 110px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        button:last-child {
+            margin-right: 0;
+        }
     }
 }

@@ -3,7 +3,7 @@ import styles from './FeaturedMovie.module.scss';
 
 function FeaturedMovie({data}) {
 
-    console.log(data)
+    console.log('Data : ', data)
 
     let genres = [];
     data.genres.forEach(genre => {
@@ -21,10 +21,10 @@ function FeaturedMovie({data}) {
             </div>
             <div className={styles.row}> 
                 <div className={styles.grade}>
-                    {data.vote_average}
+                    <strong>Note</strong> : {data.vote_average} / 10
                 </div>
                 <div className={styles.date}>
-                    {data.release_date}
+                    {data.release_date.split('-')[0]}
                 </div>
             </div>
             
